@@ -24,4 +24,3 @@ def my_data_function(num_recommendations):
     return results
 
 print(my_data_function(3))
-
