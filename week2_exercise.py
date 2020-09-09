@@ -13,11 +13,9 @@ def my_data_function(num_recommendations):
         author = i[1]
         book = f"{title} by {author}"
         if book not in book_recs.keys():
-            count = 1
-            book_recs[book] = count
+            book_recs[book] = 1
         else:
-            count = book_recs[book]
-            book_recs[book] = count + 1
+            book_recs[book] += 1
     for item in book_recs:
         if book_recs[item] == num_recommendations:
             results.append(item)
