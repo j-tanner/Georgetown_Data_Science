@@ -17,7 +17,7 @@ def my_data_function(num_recommendations):
         else:
             book_recs[book] += 1
     for item in book_recs:
-        if book_recs[item] == num_recommendations:
+        if book_recs[item] >= num_recommendations:
             results.append(item)
     return results
 
